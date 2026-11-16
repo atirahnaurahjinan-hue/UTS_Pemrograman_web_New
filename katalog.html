@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Daftar program dan kegiatan CodeCommunity beserta pencarian, filter kategori, dan jadwal kegiatan.">
+  <title>Program &amp; Kegiatan | CodeCommunity</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Poppins:wght@600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <a class="lewati" href="#konten">Lewati ke konten utama</a>
+  <header class="header" id="header-situs">
+    <div class="kontainer header-isi">
+      <a class="logo" href="index.html" aria-label="CodeCommunity, kembali ke Beranda">
+        <img src="img/logo.svg" alt="Logo CodeCommunity berupa simbol kode" width="40" height="40">
+        <span>CodeCommunity</span>
+      </a>
+      <button class="hamburger" id="tombol-menu" type="button" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="menu-utama">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" aria-label="Navigasi utama">
+        <ul class="menu" id="menu-utama">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="tentang.html">Tentang</a></li>
+            <li><a href="katalog.html" class="aktif" aria-current="page">Program &amp; Kegiatan</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="konten">
+    <section class="page-hero" aria-labelledby="judul-katalog">
+      <div class="kontainer page-hero-isi">
+        <div>
+          <h1 id="judul-katalog">Program &amp; Kegiatan</h1>
+          <p>Jelajahi berbagai bidang pembelajaran dan kegiatan yang berkaitan dengan teknologi dan pemrograman.</p>
+        </div>
+        <img src="img/hero-katalog.svg" alt="Ilustrasi jendela editor kode dengan simbol &lt;/&gt;" width="520" height="380">
+      </div>
+    </section>
+
+    <section class="seksi" aria-labelledby="judul-daftar">
+      <div class="kontainer">
+        <h2 id="judul-daftar">Daftar Program</h2>
+
+        <div class="filter-bar">
+          <div class="field">
+            <label for="cari-program">Cari nama program</label>
+            <input type="search" id="cari-program" placeholder="Contoh: Python" autocomplete="off">
+          </div>
+          <div class="field">
+            <label for="filter-kategori">Kategori</label>
+            <select id="filter-kategori">
+              <option value="semua">Semua kategori</option>
+              <option value="Programming">Programming</option>
+              <option value="Design">Design</option>
+              <option value="Database">Database</option>
+              <option value="Technology">Technology</option>
+            </select>
+          </div>
+          <button type="button" class="tombol tombol-sekunder" id="tombol-reset">Tampilkan Semua</button>
+        </div>
+
+        <p id="jumlah-hasil" class="jumlah-hasil" role="status"></p>
+        <div id="daftar-program" class="grid-katalog"></div>
+        <p id="pesan-kosong" class="pesan-kosong" hidden>Program tidak ditemukan.</p>
+        <noscript><p class="catatan">Aktifkan JavaScript untuk melihat daftar program, pencarian, dan filter.</p></noscript>
+      </div>
+    </section>
+
+    <section class="seksi seksi-putih" aria-labelledby="judul-jadwal">
+      <div class="kontainer">
+        <h2 id="judul-jadwal">Jadwal Kegiatan</h2>
+        <div class="tabel-bungkus">
+          <table>
+            <caption>Jadwal kegiatan komunitas (contoh)</caption>
+            <thead>
+              <tr>
+                <th scope="col">No.</th>
+                <th scope="col">Nama kegiatan</th>
+                <th scope="col">Hari/tanggal</th>
+                <th scope="col">Waktu</th>
+                <th scope="col">Keterangan</th>
+              </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>1</td>
+              <td>Workshop Web Development <span class="placeholder"></span></td>
+              <td><span class="placeholder">Sabtu, 21 November 2026</span></td>
+              <td><span class="placeholder">19.00-21.00 WIB</span></td>
+              <td>Praktik membuat website sederhana menggunakan HTML dan CSS.</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Kelas Python Pemula <span class="placeholder"></span></td>
+              <td><span class="placeholder">Sabtu, 28 November 2026</span></td>
+              <td><span class="placeholder">19.00-21.00 WIB</span></td>
+              <td>Belajar dasar Python melalui latihan membuat program sederhana.</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Tech Sharing Session <span class="placeholder"></span></td>
+              <td><span class="placeholder">Sabtu, 5 Desember 2026</span></td>
+              <td><span class="placeholder">19.00-21.00 WIB</span></td>
+              <td>Diskusi perkembangan AI, teknologi, dan peluang karier di bidang IT.</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="kontainer footer-grid">
+      <div>
+        <a class="logo logo-terang" href="index.html">
+          <img src="img/logo.svg" alt="Logo CodeCommunity" width="36" height="36">
+          <span>CodeCommunity</span>
+        </a>
+        <p>Komunitas programmer kampus untuk belajar, berkembang, dan berkolaborasi di bidang teknologi. <span class="placeholder">UNIVERSITAS PERTIBA</span></p>
+      </div>
+      <div>
+        <h2 class="footer-judul">Navigasi</h2>
+        <ul class="footer-daftar">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="tentang.html">Tentang</a></li>
+          <li><a href="katalog.html">Program &amp; Kegiatan</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+       </div>
+  <div>
+  <h2 class="footer-judul">Media Sosial</h2>
+
+  <div class="social-links">
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/USERNAME_IG/"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="social-item">
+
+      <svg class="social-logo instagram-logo"
+           viewBox="0 0 24 24"
+           aria-hidden="true">
+        <rect x="3" y="3" width="18" height="18" rx="5"
+              fill="none" stroke="currentColor" stroke-width="2"/>
+        <circle cx="12" cy="12" r="4"
+                fill="none" stroke="currentColor" stroke-width="2"/>
+        <circle cx="17.5" cy="6.5" r="1.2"
+                fill="currentColor"/>
+      </svg>
+
+      <span>code_community_id</span>
+    </a>
+
+    <!-- TikTok -->
+    <a href="https://www.tiktok.com/@USERNAME_TIKTOK"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="social-item">
+
+      <svg class="social-logo tiktok-logo"
+           viewBox="0 0 24 24"
+           aria-hidden="true">
+        <path fill="currentColor"
+          d="M19.6 8.2a7.1 7.1 0 0 1-4.3-1.4v8.1a5.4 5.4 0 1 1-5.4-5.4c.4 0 .8 0 1.2.1v3a2.5 2.5 0 1 0 1.3 2.2V2h3a4.2 4.2 0 0 0 4.2 4.2v2z"/>
+      </svg>
+
+      <span>code_community</span>
+    </a>
+
+  </div>
+</div>
+    </div>
+    <div class="footer-bawah">
+      <p>&copy; <span id="tahun">2026</span> CodeCommunity. Seluruh hak cipta dilindungi.</p>
+    </div>
+  </footer>
+</body>
+</html>
